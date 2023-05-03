@@ -1,0 +1,39 @@
+.containerHeader {
+  position: relative;
+  //   background-color: red;
+
+  .boxImage {
+    // z-index: -99999;
+    img {
+      z-index: -10;
+      width: 100vw;
+    }
+  }
+  .shadow {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 85.04%);
+    opacity: 0.8;
+  }
+
+  .content {
+    position: absolute;
+    width: 800px;
+    top: 50px;
+    left: 92px;
+
+    h1 {
+      font-weight: 600;
+      font-size: 48px;
+      color: #ffffff;
+    }
+
+    h2 {
+      font-size: 36px;
+      color: #ffffff;
+      margin: 16px 0 35px;
+    }
+  }
+}

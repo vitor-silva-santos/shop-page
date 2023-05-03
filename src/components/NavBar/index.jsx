@@ -1,11 +1,14 @@
 import React from "react";
 
+//SCSS
+import "../../styles/navBar.scss";
+
 //Images
 import IconSeguro from "../../assets/icons/seguro-icon.png";
 import IconTruck from "../../assets/icons/truck-icon.png";
 import IconCard from "../../assets/icons/card-icon.png";
 import IconLupa from "../../assets/icons/lupa-icon.svg";
-import IconBox from "../../assets/icons/box-icon.svg";
+import IconBox from "../../assets/icons/box-icon.png";
 import IconCoracao from "../../assets/icons/coracao-icon.svg";
 import IconUser from "../../assets/icons/user-icon.svg";
 import IconCart from "../../assets/icons/cart-icon.svg";
@@ -14,8 +17,8 @@ import Logo from "../../assets/logo-vtex.png";
 
 export const NavBar = () => {
   return (
-    <nav>
-      <ul>
+    <nav className="containerNavBar">
+      <ul className="infoTop">
         <li>
           <img src={IconSeguro} alt="icone de compra segura" />
           <p>
@@ -36,18 +39,23 @@ export const NavBar = () => {
         </li>
       </ul>
 
-      <div>
+      <div className="infoMidd">
         <img
           src={Logo}
           alt="logo da VTEX onde é uma seta em rosa apontada na diagonal e ao lado escrito VTEX"
         />
-        <div>
-          <input type="text" name="buscar" id="buscar" />
+        <div className="searchField">
+          <input
+            type="text"
+            name="buscar"
+            id="buscar"
+            placeholder="O que você está buscando?"
+          />
           <button>
             <img src={IconLupa} alt="icone da lupa" />
           </button>
         </div>
-        <div>
+        <div className="boxIcons">
           <button>
             <img src={IconBox} alt="icone de caixa" />
           </button>
@@ -63,7 +71,7 @@ export const NavBar = () => {
         </div>
       </div>
 
-      <ul>
+      <ul className="infoBottom">
         <li>TODAS CATEGORIAS</li>
         <li>SUPERMERCADO</li>
         <li>LIVRO</li>

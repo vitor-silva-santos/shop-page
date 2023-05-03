@@ -1,11 +1,12 @@
 import React from "react";
-import { NavBar } from "../../components";
+import { HeaderBanner, NavBar } from "../../components";
 import "../../styles/globalStyle.scss";
 
 const Home = () => {
   return (
-    <div>
+    <div className="containerHome">
       <NavBar />
+      <HeaderBanner />
     </div>
   );
 };
