@@ -1,0 +1,49 @@
+$colorPink: #f71963;
+
+.containerCategoryNav {
+  display: flex;
+  //   justify-content: space-between;
+  justify-content: center;
+  gap: 59px;
+  padding: 35px 90px;
+
+  .boxIten {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:first-child {
+      figure {
+        background: #ffffff;
+        box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.22);
+      }
+      p {
+        color: $colorPink;
+      }
+    }
+
+    figure {
+      width: 128px;
+      height: 128px;
+      background: #f4f4f4;
+      box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.13);
+      border-radius: 10px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      color: #4e4e4e;
+    }
+  }
+}

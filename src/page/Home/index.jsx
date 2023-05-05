@@ -1,5 +1,10 @@
 import React from "react";
-import { HeaderBanner, NavBar } from "../../components";
+import {
+  CategoryNav,
+  HeaderBanner,
+  NavBar,
+  ProductsList,
+} from "../../components";
 import "../../styles/globalStyle.scss";
 
 const Home = () => {
@@ -7,6 +12,10 @@ const Home = () => {
     <div className="containerHome">
       <NavBar />
       <HeaderBanner />
+      <main>
+        <CategoryNav />
+        <ProductsList />
+      </main>
     </div>
   );
 };
