@@ -11,6 +11,7 @@ export const Button = (props) => {
 
   return (
     <button
+      className="componentButton"
       style={{
         width: width,
         height: height,

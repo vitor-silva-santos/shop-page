@@ -3,6 +3,7 @@ import {
   CategoryNav,
   HeaderBanner,
   NavBar,
+  Parceiros,
   ProductsList,
 } from "../../components";
 import "../../styles/globalStyle.scss";
@@ -14,6 +15,8 @@ const Home = () => {
       <HeaderBanner />
       <main>
         <CategoryNav />
+        <ProductsList navProduct={"flex"} verTodos={"none"} />
+        <Parceiros />
         <ProductsList />
       </main>
     </div>

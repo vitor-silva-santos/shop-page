@@ -1,0 +1,154 @@
+$colorPink: #f71963;
+
+.containerProducts {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+
+    span {
+      width: 360px;
+      height: 1px;
+      border: 1px solid #dedede;
+    }
+
+    h2 {
+      font-weight: 700;
+      font-size: 30px;
+      color: $colorPink;
+    }
+  }
+
+  .navProducts {
+    display: none;
+    justify-content: center;
+    margin: 8px 0 7px 0;
+
+    div {
+      display: grid;
+      place-items: center;
+      border-top: 1px solid #bdbdbd;
+      border-bottom: 1px solid #bdbdbd;
+      border-left: 1px solid #bdbdbd;
+      width: 211px;
+      height: 40px;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:first-child {
+        color: $colorPink;
+        font-weight: 700;
+      }
+
+      &:last-child {
+        border-right: 1px solid #bdbdbd;
+      }
+
+      font-weight: 400;
+      font-size: 16px;
+      color: #3b3b3b;
+    }
+  }
+
+  h3 {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 15px;
+    color: #3f3f40;
+    cursor: pointer;
+    margin: 5px 0 20px 0;
+  }
+
+  .carouselContainer {
+    display: flex;
+    align-items: center;
+    max-width: 1413px;
+    gap: 40px;
+
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 62px;
+      padding: 15px;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      background: #ffffff;
+      box-shadow: 0px 3px 19px rgba(0, 0, 0, 0.22);
+      border-radius: 10px;
+      max-width: 270px;
+      padding: 20px 12px;
+      gap: 10px;
+
+      figure {
+        margin-top: 10px;
+      }
+
+      .infoProduct {
+        .name {
+          font-weight: 300;
+          font-size: 15px;
+          line-height: 22px;
+          color: #3f3f40;
+          margin-bottom: 12px;
+        }
+
+        .oldPrice {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          text-decoration-line: line-through;
+          color: #808080;
+          margin-bottom: 2px;
+        }
+
+        .price {
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 30px;
+          color: #3f3f40;
+          margin-bottom: 2px;
+        }
+
+        .parcelas {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 18px;
+          color: #3f3f40;
+          margin-bottom: 7px;
+        }
+
+        .frete {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 18px;
+          color: $colorPink;
+        }
+      }
+    }
+
+    .arrowButton {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      .arrowRight {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

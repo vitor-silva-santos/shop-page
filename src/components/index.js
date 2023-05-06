@@ -3,3 +3,4 @@ export * from "./HeaderBanner";
 export * from "./Button";
 export * from "./CategoryNav";
 export * from "./ProductsList";
+export * from "./Parceiros";

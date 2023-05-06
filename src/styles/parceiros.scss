@@ -1,0 +1,51 @@
+.containerParceiros {
+  display: flex;
+  justify-content: center;
+  gap: 105px;
+  margin-top: 70px;
+
+  div {
+    position: relative;
+    width: 574px;
+
+    .boxImage {
+      img {
+        // z-index: -10;
+        width: 574px;
+        height: 350px;
+        border-radius: 20px;
+      }
+    }
+
+    .shadow {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 99%;
+      border-radius: 0px 0px 20px 20px;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 85.04%);
+      opacity: 0.8;
+    }
+
+    .content {
+      position: absolute;
+      top: 114px;
+      left: 40px;
+      width: 196px;
+      color: #fff;
+
+      h3 {
+        font-weight: 700;
+        font-size: 40px;
+        margin-bottom: 8px;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 32px;
+      }
+    }
+  }
+}
