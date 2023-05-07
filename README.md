@@ -32,3 +32,6 @@ O comando acima irá gerar os arquivos de produção na pasta /build.
 ### `yarn start`
 Este comando iniciará o servidor de desenvolvimento e abrirá o projeto no navegador.
 
+## Projeto No Ar:
+<a href="https://loja-econverse-teste.netlify.app/">Clique Aqui<a/>
+
