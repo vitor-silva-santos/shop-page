@@ -4,3 +4,6 @@ export * from "./Button";
 export * from "./CategoryNav";
 export * from "./ProductsList";
 export * from "./Parceiros";
+export * from "./CardProdutos";
+export * from "./Marcas";
+export * from "./Footer";

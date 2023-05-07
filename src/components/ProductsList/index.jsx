@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+// import Modal from "react-modal";
 
 import { getProducts } from "../../services/produtos";
 import { formatCurrency } from "../../utils/formatCurrency";
@@ -6,9 +7,35 @@ import Arrow from "../../assets/arrow.png";
 import "../../styles/productList.scss";
 import { Button } from "../Button";
 
+// Modal.setAppElement("#root");
+
+function Modal({ handleClose, show, children }) {
+  const showHideClassName = show ? "modal display-block" : "modal display-none";
+
+  return (
+    <div className={showHideClassName}>
+      <section className="modal-main">
+        {children}
+        <button className="btnCloseModal" onClick={handleClose}>
+          &#10006;
+        </button>
+      </section>
+    </div>
+  );
+}
+
 export const ProductsList = ({ navProduct, verTodos }) => {
   const [produtos, setProdutos] = useState([]);
+  const [showModal, setShowModal] = useState(null);
   const carousel = useRef(null);
+
+  const handleShowModal = (index) => {
+    setShowModal(index);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(null);
+  };
 
   async function fetchProdutos() {
     const data = await getProducts();
@@ -76,6 +103,7 @@ export const ProductsList = ({ navProduct, verTodos }) => {
                 size={14}
                 weight={700}
                 radius={4}
+                onClick={() => handleShowModal(index)}
               />
             </div>
           ))}
@@ -84,6 +112,24 @@ export const ProductsList = ({ navProduct, verTodos }) => {
           <img className="arrowRight" src={Arrow} alt="seta para direita" />
         </button>
       </div>
+      {showModal !== null && (
+        <Modal show={true} handleClose={handleCloseModal}>
+          <div className="shadowBox">
+            <div className="containerModal">
+              <img
+                src={produtos[showModal].photo}
+                alt={produtos[showModal].productName}
+              />
+              <div>
+                <h2>{produtos[showModal].productName}</h2>
+                <h3>{formatCurrency(produtos[showModal].price)}</h3>
+                <p>{produtos[showModal].descriptionShort}</p>
+                <button>Veja mais detalhe do produto {">"}</button>
+              </div>
+            </div>
+          </div>
+        </Modal>
+      )}
     </section>
   );
 };

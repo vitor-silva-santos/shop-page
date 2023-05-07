@@ -4,4 +4,9 @@ $colorPink: #f71963;
   border: none;
   background-color: $colorPink;
   color: #fff;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
 }

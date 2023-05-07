@@ -1,7 +1,7 @@
 $colorPink: #f71963;
+$colorPrimaryModal: #041e50;
 
 .containerProducts {
-  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -149,6 +149,87 @@ $colorPink: #f71963;
       .arrowRight {
         transform: rotate(180deg);
       }
+    }
+  }
+
+  .shadowBox {
+    z-index: 9999999999999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.54);
+    width: 100vw;
+    height: 100vh;
+
+    .containerModal {
+      display: flex;
+      z-index: 9999999999999;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      width: 769px;
+      height: 300px;
+      padding: 56px;
+      gap: 87px;
+
+      div {
+        h2 {
+          font-weight: 400;
+          font-size: 20px;
+          letter-spacing: 0.05em;
+          color: $colorPrimaryModal;
+          margin-bottom: 21px;
+        }
+
+        h3 {
+          font-weight: 900;
+          font-size: 20px;
+          line-height: 100%;
+          letter-spacing: 0.05em;
+          color: $colorPrimaryModal;
+          margin-bottom: 17px;
+        }
+
+        p {
+          font-weight: 400;
+          font-size: 10px;
+          line-height: 150.5%;
+          letter-spacing: 0.05em;
+          color: #222222;
+          margin-bottom: 18px;
+        }
+
+        button {
+          background-color: transparent;
+          border: none;
+
+          font-weight: 400;
+          font-size: 12px;
+          letter-spacing: 0.05em;
+          color: #041e50;
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  .btnCloseModal {
+    z-index: 9999999999999;
+    position: fixed;
+    top: 32%;
+    left: 72%;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
     }
   }
 }

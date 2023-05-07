@@ -1,7 +1,10 @@
 import React from "react";
 import {
+  CardProducts,
   CategoryNav,
+  Footer,
   HeaderBanner,
+  Marcas,
   NavBar,
   Parceiros,
   ProductsList,
@@ -18,7 +21,11 @@ const Home = () => {
         <ProductsList navProduct={"flex"} verTodos={"none"} />
         <Parceiros />
         <ProductsList />
+        <CardProducts />
+        <Marcas />
+        <ProductsList />
       </main>
+      <Footer />
     </div>
   );
 };

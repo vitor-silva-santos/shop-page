@@ -1,0 +1,43 @@
+$colorPink: #f71963;
+
+.containerMarcas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  margin-top: 150px;
+  margin-bottom: 104px;
+
+  h2 {
+    font-weight: 700;
+    font-size: 30px;
+    color: $colorPink;
+  }
+
+  .carousel {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    position: relative;
+
+    div {
+      display: grid;
+      place-items: center;
+
+      width: 211px;
+      height: 211px;
+      border-radius: 50%;
+      box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.13);
+    }
+
+    button {
+      border: none;
+      background-color: transparent;
+      position: absolute;
+      top: 50%;
+      right: 1px;
+      cursor: pointer;
+      transform: translateY(-50%);
+    }
+  }
+}
