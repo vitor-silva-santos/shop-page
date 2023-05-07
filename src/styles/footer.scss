@@ -25,6 +25,11 @@ footer {
       font-size: 12px;
       text-transform: uppercase;
       margin-bottom: 10px;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     .sobre {
@@ -91,6 +96,8 @@ footer {
         text-align: center;
         color: #3f3f40;
         margin-bottom: 30px;
+        cursor: auto;
+        text-decoration: none;
       }
 
       div {
